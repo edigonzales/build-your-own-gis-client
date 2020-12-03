@@ -1,0 +1,20 @@
+@startuml
+
+title Add layer  
+
+actor "User" as user
+
+participant searchservice as "Search Service"
+participant dataproductservice as "Dataproduct Service"
+participant wms as "Web Map Service"
+
+user->searchservice: fts: layername   
+user<--searchservice: 0..* dataproduct_ids (json) 
+
+user->dataproductservice: dataproduct_id
+user<--dataproductservice: additional meta information (json)
+
+user->wms: dataproduct_id + meta information
+user<--wms: png
+
+@enduml
