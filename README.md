@@ -6,7 +6,8 @@
 
 Die Hinzufügen eines Kartenlayers geschieht in drei Schritten.
 
-## Layer suchen 
+
+## Layer suchen
 
 Im Suchservice [https://geo.so.ch/api/search/v2/?searchtext=fixp&filter=foreground](https://geo.so.ch/api/search/v2/?searchtext=fixp&filter=foreground) kann mittels Volltextsuch nach allen vorhandenen Kartenlayern gesucht werden. Der Suchtext muss im Parameter `searchtext` stehen, z.B. `fixp` für "Fixpunkte". Es sind der technische Namen, der menschenlesbare Namen und die Kurzbeschreibung des Kartenlayers indexiert. So findet z.B. "Parzelle" auch den Kartenlayer `Grundstücke (amtliche Vermessung)` (Parzelle als Synonym für Grundstück, beschrieben in der Kurzbeschreibung). Der Rückgabewerte ist JSON.
 
